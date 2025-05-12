@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the Chill Bill privacy policy to understand how we handle your data with our on-device focused iOS app, including optional Xero and In-App Purchase integrations.">
+    <title>Privacy Policy - Chill Bill</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>
+                <img src="logo.png" alt="Chill Bill Logo" style="height: 36px; vertical-align: middle; margin-right: 12px;">
+                Privacy Policy
+            </h1>
+            <nav>
+                <a href="index.html"><i data-lucide="home" class="nav-icon"></i> Home</a>
+                <a href="help.html"><i data-lucide="help-circle" class="nav-icon"></i> Help</a>
+                <a href="index.html#signup" class="button"><i data-lucide="zap" class="nav-icon"></i> Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="privacy-content">
+            <div class="last-updated">
+                <p><strong>Last Updated:</strong> December 5, 2025</p>
+            </div>
+
+            <div class="privacy-intro">
+                <p>At Chill Bill ("we," "us," "our"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application ("App"). Our App is designed to operate primarily on your device. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h3>1. Information We Handle and How It's Stored</h3>
+                <p>Our App is designed to work primarily on your device. This section details the types of information the App handles and where it is stored. "Collection" in this policy refers to data that might be transmitted off your device, typically at your explicit request or as part of an integrated third-party service like Xero or Apple In-App Purchases.</p>
+                
+                <ul>
+                    <li>
+                        <strong>Voice Recordings (Processed On-Device):</strong> When you use the voice input feature, your voice is recorded. This recording is processed entirely on your device to transcribe it into text and extract invoice/quote details using local on-device speech recognition and natural language processing technologies. Voice recordings are stored temporarily on your device during this process and are not sent to our servers or any third-party servers for transcription.
+                    </li>
+                    <li>
+                        <strong>Invoice and Quote Data (Stored Locally):</strong> 
+                        Information you provide or that is generated for invoices and quotes (such as customer names, line items, prices, quantities, dates, and references) is handled within the App. 
+                        Metadata logs for tracking purposes (e.g., customer name, reference, total amount, status, and Xero Invoice/Quote ID if applicable) are stored locally on your device in JSON files within the App's private Application Support directory. 
+                        If you choose to export a document as a PDF, that PDF file is saved to a location you select on your device.
+                    </li>
+                    <li>
+                        <strong>Reusable Invoice Templates (Stored Locally):</strong> If you choose to save an invoice or quote as a reusable template, the full details of that document (including customer name, line items, prices, quantities, dates, and references) are stored locally on your device as a JSON file in the App's private Application Support directory. This allows you to quickly create new documents based on previously saved information.
+                    </li>
+                    <li>
+                        <strong>Company Details (Stored Locally):</strong> Information you provide in the App's settings, such as your company name, address, contact information, ABN/Tax ID, logo, and payment details (for inclusion on invoices), is stored locally on your device using `UserDefaults`.
+                    </li>
+                    <li>
+                        <strong>Correction Data (Learning Feature - Stored Locally):</strong> To improve the accuracy of on-device invoice parsing, the App learns from corrections you make. This involves storing mappings of original (potentially misparsed) text snippets to your corrected text for fields like client names, references, line item descriptions, and individual words. This learning data is stored locally on your device using `UserDefaults` through the InvoiceCacheManager.
+                    </li>
+                    <!-- Removed Usage Data for Free Tier Management -->
+                    <li>
+                        <strong>Xero Integration Data (Optional Transmission to Xero):</strong>
+                        <ul>
+                            <li>If you choose to connect your Xero account, we use secure OAuth 2.0 authentication. The necessary Xero OAuth tokens (access token, refresh token, tenant ID) are stored securely in your device's Keychain.</li>
+                            <li>When you choose to send an invoice or quote to Xero, the following data from your document is "collected" in the sense that it is transmitted from your device to Xero's API: Customer Name, Invoice/Quote Date, Due Date, Line Item Descriptions, Quantities, and Unit Prices. The document is typically sent as a Draft. This data is then subject to Xero's Privacy Policy.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>In-App Purchase (IAP) Data (Handled by Apple; Transaction Data Stored Locally):</strong>
+                        <ul>
+                            <li>If you make an In-App Purchase (e.g., for a subscription), the purchase is processed by Apple through the App Store. We do not "collect" or store your payment card details.</li>
+                            <li>Apple provides our App with transaction information, such as the product purchased, transaction ID, purchase date, and subscription expiry date. We store this purchase history securely in your device's Keychain to manage your subscription status. This transaction data is "collected" from Apple's service.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Device Permissions Information (Requests for Local Access):</strong> The App will request your permission to access certain device features for on-device functionality:
+                        <ul>
+                            <li><strong>Microphone:</strong> To record audio for voice input (transcription is on-device).</li>
+                            <li><strong>Local Authentication (Face ID/Touch ID):</strong> To secure access to the App and your locally stored data, if you enable this feature.</li>
+                            <li><strong>File System/Documents Folder Access:</strong> If you choose to export invoices/quotes as PDF files, the App needs permission to save these files to your chosen location.</li>
+                            <li><strong>User Defaults:</strong> Used internally to store your settings (like company details, correction cache, free tier usage count) locally.</li>
+                            <li><strong>File Timestamps & Disk Space:</strong> Used internally for managing locally stored files (e.g., audio recordings, JSON data files).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h3>2. Use of Your Information</h3>
+                <p>Having accurate information permits us to provide you with a smooth, efficient, and customized experience. Specifically, we use information collected about you via the App to:</p>
+                
+                <ul>
+                    <li>Create, manage, and store your invoices and quotes locally on your device.</li>
+                    <li>Process your voice recordings into text and structured invoice/quote data entirely on your device.</li>
+                    <li>Apply learned corrections from your previous edits to improve the accuracy of on-device data parsing.</li>
+                    <!-- Removed: Manage your free tier usage based on locally stored counts. -->
+                    <li>Offer an introductory free trial period for new subscribers to access premium features, managed via Apple's In-App Purchase system.</li>
+                    <li>Generate PDF documents from your invoices/quotes for local storage or sharing, upon your request.</li>
+                    <li>Facilitate sharing of documents via standard iOS sharing mechanisms, upon your request.</li>
+                    <li>(If you connect to Xero) Send your invoice/quote data to your Xero account, upon your request.</li>
+                    <li>Store your company details locally for automatic inclusion in your documents.</li>
+                    <li>(If you make In-App Purchases) Manage your subscription status and provide access to subscribed features using purchase history stored locally.</li>
+                    <li>Troubleshoot problems and respond to your support requests.</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h3>3. Disclosure of Your Information</h3>
+                <p>We prioritize your privacy and operate primarily on-device. We do not share your personal information, voice recordings, or detailed invoice/quote data stored within the App with third parties, except in the following limited situations:</p>
+                
+                <ul>
+                    <li>
+                        <strong>With Your Explicit Consent or Action:</strong>
+                        <ul>
+                            <li><strong>Xero:</strong> If you explicitly authorize the connection to Xero and choose to send an invoice or quote, we will transmit the necessary document data (as detailed in Section 1) to Xero via their API. Xero's use of your data is then governed by Xero's Privacy Policy.</li>
+                            <li><strong>PDF Export/Sharing:</strong> If you choose to export a document as a PDF or share it using iOS sharing features, the data within that document will be handled according to your chosen action and sharing method.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>In-App Purchases (Apple):</strong> When you make an In-App Purchase, your payment information is processed by Apple. We receive transaction confirmation from Apple but not your payment card details. Apple's handling of your data is governed by Apple's Privacy Policy.
+                    </li>
+                    <li>
+                        <strong>By Law or to Protect Rights:</strong> If release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation. This is highly unlikely for an on-device app but is a standard legal provision.
+                    </li>
+                </ul>
+                <p>Your voice recordings are processed on-device and are not shared with us or any third party for transcription or any other purpose.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h3>4. Security of Your Information</h3>
+                <p>We use administrative, technical, and physical security measures to help protect your information stored locally on your device. Key security measures include:</p>
+                <ul>
+                    <li><strong>On-Device Processing:</strong> Core functionalities, including voice transcription and invoice data parsing, occur directly on your device, minimizing data transmission.</li>
+                    <li><strong>Secure Keychain Storage:</strong> Sensitive data such as Xero OAuth tokens and In-App Purchase history is stored in the iOS Keychain.</li>
+                    <li><strong>Local Storage:</strong> Other data like company details, correction cache, usage counts, and invoice/quote metadata logs are stored in the App's private storage areas (e.g., `UserDefaults`, App's private Application Support directory).</li>
+                    <li><strong>Local Authentication:</strong> You can enable Face ID/Touch ID/Passcode to protect access to the App.</li>
+                </ul>
+                <p>While we have taken reasonable steps to secure the information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable. Any information stored locally is subject to the security of your device itself. We strongly recommend using a strong device passcode, Touch ID, or Face ID to secure your device.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h3><i data-lucide="clock" style="vertical-align: middle; margin-right: 8px;"></i> 5. Data Retention</h3>
+                <p>We retain your information locally on your device as follows:</p>
+                <ul>
+                    <li><strong>Voice Recordings:</strong> Stored temporarily on your device during the recording and transcription process and are then typically discarded unless explicitly saved by a separate user action (which is not a current feature for raw audio).</li>
+                    <li><strong>Invoice/Quote Metadata Logs (`TrackingService`):</strong> Stored locally in JSON files in the App's private Application Support directory as long as you use the App or until you delete the App or its data.</li>
+                    <li><strong>Reusable Invoice Templates:</strong> Stored locally in JSON files in the App's private Application Support directory as long as you use the App, until you delete them from within the App, or until you delete the App or its data.</li>
+                    <li><strong>Company Details, Correction Cache (`UserDefaults`):</strong> Stored locally as long as you use the App or until you delete the App or its data. (Removed Usage Data).</li>
+                    <li><strong>Xero OAuth Tokens & IAP History (Keychain):</strong> Stored locally in the Keychain. They persist until the App is deleted, the tokens are revoked/invalidated, or you explicitly disconnect from Xero (which should clear Xero tokens).</li>
+                    <li><strong>Exported PDF Documents:</strong> If you export documents as PDFs, these files are stored in the location you choose on your device (e.g., Files app) and are managed by you.</li>
+                </ul>
+                <p>Deleting the App from your device will generally remove all App-specific data stored in its private directories and Keychain.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h3><i data-lucide="user" style="vertical-align: middle; margin-right: 8px;"></i> 6. Your Data Rights</h3>
+                <p>Since most data is stored locally on your device, you have direct control over it:</p>
+                
+                <ul>
+                    <li>
+                        <strong>Access & Correction:</strong> You can access and correct your Company Details directly within the App. You can typically edit invoice and quote information within the App before finalization or if it's part of the locally tracked metadata. Correction cache data is implicitly managed as you use the app and make edits. You can also view and use your saved reusable invoice templates.
+                    </li>
+                    <li>
+                        <strong>Deletion:</strong> You can delete individual tracked invoices or quotes within the App (if this feature is available for the metadata logs). You can delete your saved reusable invoice templates from within the App. Deleting the App from your device will remove all locally stored App-specific data. You can also delete any PDF files you have exported.
+                    </li>
+                    <li>
+                        <strong>Xero Data:</strong> You can manage data sent to Xero directly within your Xero account. Disconnecting the App from Xero will prevent further data transmission.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h3><i data-lucide="baby" style="vertical-align: middle; margin-right: 8px;"></i> 7. Policy for Children</h3>
+                <p>We do not knowingly solicit information from or market to children under the age of 13 (or the equivalent minimum age in the relevant jurisdiction). If you become aware of any data we have collected from children under the relevant age, please contact us using the contact information provided below.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h3><i data-lucide="refresh-cw" style="vertical-align: middle; margin-right: 8px;"></i> 8. Changes to This Privacy Policy</h3>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the App after the date such revised Privacy Policy is posted.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h3><i data-lucide="mail" style="vertical-align: middle; margin-right: 8px;"></i> 9. Contact Us</h3>
+                <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
+                <p>
+                    Chill Bill App<br>
+                    <a href="mailto:privacy@chillbill.app">privacy@chillbill.app</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Chill Bill App. All rights reserved.</p>
+            <p>
+                <a href="index.html">Home</a> | 
+                <a href="help.html">Help & Support</a> | 
+                <a href="index.html#signup" class="button" style="padding:8px 22px; font-size:0.9em;"><i data-lucide="zap" class="nav-icon"></i> Get Started</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
