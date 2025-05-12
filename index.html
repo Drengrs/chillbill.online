@@ -1,9 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>chillbill.online</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chill Bill: Create invoices and quotes instantly using just your voice. Secure, on-device processing for iOS. Integrates with Xero.">
+    <title>Chill Bill - Voice to Invoice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
 </head>
 <body>
-    <p>Configuration site for chillbill.online.</p>
+
+    <header>
+        <div class="container">
+            <h1>
+                <img src="logo.png" alt="Chill Bill Logo" style="height: 36px; vertical-align: middle; margin-right: 12px;">
+                Chill Bill
+            </h1>
+            <nav>
+                <a href="#features"><i data-lucide="layout-grid" class="nav-icon"></i> Features</a>
+                <a href="#testimonials"><i data-lucide="star" class="nav-icon"></i> Reviews</a>
+                <a href="help.html"><i data-lucide="help-circle" class="nav-icon"></i> Help</a>
+                <a href="privacy.html"><i data-lucide="shield" class="nav-icon"></i> Privacy</a>
+                <a href="#signup" class="button"><i data-lucide="zap" class="nav-icon"></i> Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Voice to Invoice, Instantly.</h1>
+            <p>Stop typing, start talking. Create professional invoices and quotes effortlessly with Chill Bill.</p>
+            <a href="#signup" class="button" style="font-size:1.2em; padding:18px 40px; margin-top:30px;"><i data-lucide="zap"></i> Try Our Free Tier</a>
+            <div style="margin-top: 30px;">
+                <a href="#APP_STORE_LINK_PLACEHOLDER">
+                    <img src="app-store-badge.png" alt="Download on the App Store" class="app-store-badge">
+                </a>
+            </div>
+            
+            <div class="app-preview" style="margin-top: 50px;">
+                <img src="app-screenshot.png" alt="Chill Bill App Interface" style="max-width: 300px; border-radius: 30px; border: 1px solid #333;">
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="features" class="features">
+            <h2>Why Chill Bill?</h2>
+            <div class="feature">
+                <i data-lucide="mic"></i>
+                <h3>Voice Recording</h3>
+                <p>Just tap, talk, and let Chill Bill handle the rest. No more typing invoices.</p>
+            </div>
+            <div class="feature">
+                <i data-lucide="brain-circuit"></i>
+                <h3>AI-Powered Extraction</h3>
+                <p>Automatically pulls out customer names, items, quantities, and prices with high accuracy.</p>
+            </div>
+            <div class="feature">
+                <i data-lucide="edit"></i>
+                <h3>Easy Editing</h3>
+                <p>Review and edit any extracted information before sending. Total control, zero hassle.</p>
+            </div>
+            <div class="feature">
+                <i data-lucide="file-text"></i>
+                <h3>PDF & Xero Integration</h3>
+                <p>Share professional PDFs or send directly to your Xero account in one tap.</p>
+            </div>
+            <div class="feature">
+                <i data-lucide="shield"></i>
+                <h3>On-Device Privacy</h3>
+                <p>Your voice recordings are processed securely on your device. Your data never leaves your phone.</p>
+            </div>
+            <div class="feature">
+                <i data-lucide="bar-chart-2"></i>
+                <h3>Invoice Tracking</h3>
+                <p>Track sent invoices and quotes, and mark them as paid. Stay organized effortlessly.</p>
+            </div>
+        </section>
+
+        <section class="cta-section" id="signup">
+            <h2>Ready to get paid faster?</h2>
+            <p>
+                Join Chill Bill today and experience the fastest way to create and send invoices.
+            </p>
+            <a href="#APP_STORE_LINK_PLACEHOLDER" class="button"><i data-lucide="rocket"></i> Download on the App Store</a>
+            <div style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+                <p>Available on iOS. Android version coming soon. Try our free tier (up to 2 documents per month)!</p>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-list">
+                <div class="testimonial">
+                    <p>"I created my first invoice in under a minute. Game changer for my business!"</p>
+                    <div>— Alex, Freelancer</div>
+                </div>
+                <div class="testimonial">
+                    <p>"The voice feature is so accurate. I love how easy it is to send invoices to Xero."</p>
+                    <div>— Priya, Consultant</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Finally, an invoicing app that respects my privacy. Everything stays on my phone."</p>
+                    <div>— Sam, Designer</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-short">
+            <h2>Frequently Asked Questions</h2>
+            <div style="max-width:700px; margin:0 auto;">
+                <details>
+                    <summary>Is Chill Bill free to use?</summary>
+                    <div>Yes! Chill Bill offers a free tier that allows you to create up to 2 documents (invoices or quotes) per month. For unlimited document creation and access to all features, you can subscribe to one of our plans.</div>
+                </details>
+                <details>
+                    <summary>How accurate is the voice recognition?</summary>
+                    <div>Chill Bill uses advanced on-device AI for high accuracy, even in noisy environments. Always review before sending.</div>
+                </details>
+                <details>
+                    <summary>Do you store my data?</summary>
+                    <div>No. All your data and voice recordings are processed and stored on your device only. We never upload your data to our servers.</div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Chill Bill App. All rights reserved.</p>
+            <p>
+                <a href="privacy.html">Privacy Policy</a> | 
+                <a href="help.html">Help & Support</a> | 
+                <a href="#signup" class="button" style="padding:8px 22px; font-size:0.9em;"><i data-lucide="zap" class="nav-icon"></i> Get Started</a>
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>

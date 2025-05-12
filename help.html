@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get help and support for the Chill Bill app. Find answers to frequently asked questions about voice recording, Xero integration, and more.">
+    <title>Help & Support - Chill Bill</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>
+                <img src="logo.png" alt="Chill Bill Logo" style="height: 36px; vertical-align: middle; margin-right: 12px;">
+                Chill Bill Help
+            </h1>
+            <nav>
+                <a href="index.html"><i data-lucide="home" class="nav-icon"></i> Home</a>
+                <a href="privacy.html"><i data-lucide="shield" class="nav-icon"></i> Privacy</a>
+                <a href="#contact" class="button"><i data-lucide="mail" class="nav-icon"></i> Contact Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-short">
+                <h3>Getting Started</h3>
+                <details>
+                    <summary>How do I create my first invoice/quote?</summary>
+                    <div>Tap the microphone button on the main screen, record the details, review the extracted information on the editor screen, make any corrections, and then choose to share as PDF or send to Xero (if connected).</div>
+                </details>
+                
+                <details>
+                    <summary>Why do I need to enter Company Details?</summary>
+                    <div>Your company name, address, ABN, etc., are needed to populate the header of your generated PDF invoices and quotes. You'll be prompted on first launch, or you can edit them anytime in Settings.</div>
+                </details>
+                
+                <details>
+                    <summary>How does the voice recording work?</summary>
+                    <div>Simply speak the details naturally. The app processes your voice on your device to extract key information like customer name, items, quantities, and prices.</div>
+                </details>
+            </div>
+
+            <div class="faq-short">
+                <h3>Recording Tips</h3>
+                <details>
+                    <summary>How can I get the best voice recognition results?</summary>
+                    <div>
+                        <ul>
+                            <li><strong>Speak Clearly:</strong> Enunciate clearly and speak at a moderate pace.</li>
+                            <li><strong>Quiet Environment:</strong> Record in a quiet place to minimize background noise.</li>
+                            <li><strong>Key Information First:</strong> Start with essential details like customer name and reference number.</li>
+                            <li><strong>Line Items:</strong> State each item clearly, including description, quantity, and price.</li>
+                            <li><strong>Natural Language:</strong> Speak naturally; rigid commands aren't necessary.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>Does the app learn from my edits?</summary>
+                    <div>Yes! Chill Bill learns from corrections you make to extracted invoice details. This helps improve parsing accuracy over time. This learning process happens entirely on your device to protect your privacy.</div>
+                </details>
+                <details>
+                    <summary>What's the best way to describe line items?</summary>
+                    <div>
+                        For best results, use a consistent format like: "Item: Design work, Quantity: 5 hours, Price: 100 dollars per hour". The app will automatically calculate totals based on the quantities and prices you provide.
+                    </div>
+                </details>
+                
+                <details>
+                    <summary>Is my voice data secure?</summary>
+                    <div>
+                        Yes! Your voice recordings are processed securely on your device for privacy. They are never sent to our servers or stored beyond the processing needed to extract the invoice details.
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-short">
+                <h3>Editing & Sharing</h3>
+                <details>
+                    <summary>How do I edit extracted details?</summary>
+                    <div>On the editor screen that appears after recording, simply tap on any field (customer name, line item description, quantity, price, etc.) to modify it using the keyboard.</div>
+                </details>
+                
+                <details>
+                    <summary>How do I add/remove line items?</summary>
+                    <div>Use the '+' button to add a new blank line item or swipe left on an existing item to reveal a delete button.</div>
+                </details>
+                
+                <details>
+                    <summary>What's the difference between Share PDF and Send to Xero?</summary>
+                    <div>"Share as PDF" generates a standard PDF file you can send via email, messages, AirDrop, etc. "Send to Xero" (requires connecting your Xero account in Settings) sends the invoice/quote data directly into your Xero accounting software.</div>
+                </details>
+                
+                <details>
+                    <summary>How do I add payment details or a logo?</summary>
+                    <div>Go to the Settings tab and select "Company Details" to add your bank account info, a payment link (like PayPal or Stripe), or upload a company logo to appear on your PDFs.</div>
+                </details>
+            </div>
+
+            <div class="faq-short">
+                <h3>Xero Integration</h3>
+                <details>
+                    <summary>How do I connect to Xero?</summary>
+                    <div>Go to the Settings tab, select "Xero Integration", and follow the prompts to log in and authorize the connection securely.</div>
+                </details>
+                
+                <details>
+                    <summary>What data is sent to Xero?</summary>
+                    <div>The app sends the necessary details to create a draft invoice or quote in your Xero account, including customer, dates, line items, and amounts.</div>
+                </details>
+                
+                <details>
+                    <summary>Can I view the sent invoice in Xero from the app?</summary>
+                    <div>Yes, after successfully sending, a "View in Xero" button appears, which will open the corresponding document directly in the Xero web interface or mobile app.</div>
+                </details>
+            </div>
+
+            <div class="faq-short">
+                <h3>Troubleshooting</h3>
+                <details>
+                    <summary>Why aren't the details extracting correctly?</summary>
+                    <div>Ensure you're speaking clearly in a quiet environment and stating the item, quantity, and price for each line item. Always review and edit the extracted fields.</div>
+                </details>
+                
+                <details>
+                    <summary>Why can't I record?</summary>
+                    <div>Make sure you have granted Microphone permission to the Chill Bill app in your iPhone's Settings > Privacy & Security > Microphone.</div>
+                </details>
+                
+                <details>
+                    <summary>Why can't I connect to Xero?</summary>
+                    <div>Ensure you have an active internet connection and that you entered your Xero login details correctly during the authorization process. Check Xero's status page if problems persist.</div>
+                </details>
+            </div>
+
+            <div id="contact" class="cta-section" style="margin-top: 60px;">
+                <h3>Still Need Help?</h3>
+                <p>Our support team is ready to assist you with any questions or issues.</p>
+                <a href="mailto:support@chillbill.app" class="button"><i data-lucide="mail"></i> Email Support</a>
+                <p style="margin-top: 20px; font-size: 0.9em;">
+                    Response time: Usually within 24 hours
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Chill Bill App. All rights reserved.</p>
+            <p>
+                <a href="index.html">Home</a> | 
+                <a href="privacy.html">Privacy Policy</a> | 
+                <a href="#contact" class="button" style="padding:8px 22px; font-size:0.9em;"><i data-lucide="mail" class="nav-icon"></i> Contact Support</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

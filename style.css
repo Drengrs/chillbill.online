@@ -1,0 +1,661 @@
+/* Chill Bill Website Styles - Dark Theme */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Color Palette - Matching App Screenshots */
+:root {
+    --background-color: #121212;    /* Dark background */
+    --card-bg: #1e1e1e;             /* Slightly lighter dark for cards */
+    --text-color: #ffffff;          /* White text */
+    --secondary-text-color: #b0b0b0; /* Light gray text */
+    --accent-color: #e57c65;        /* Coral/orange accent from app */
+    --accent-dark: #c45a45;         /* Darker coral for hover states */
+    --accent-light: #f8a08c;        /* Lighter coral for highlights */
+    --secondary-color: #4ecdc4;     /* Teal from app's Xero button */
+    --border-color: #333333;        /* Dark gray borders */
+    --input-bg: #2a2a2a;            /* Dark input background */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Header - Dark with App Logo */
+header {
+    background-color: var(--background-color);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; /* Changed from center to baseline */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 16px;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+header nav a:hover {
+    color: var(--accent-color);
+}
+
+header nav a.button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+header nav a.button:hover {
+    background-color: var(--accent-dark);
+}
+
+/* Main Content */
+main {
+    margin-bottom: 60px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    line-height: 1.2;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-text-color);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+}
+
+ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.75rem;
+    color: var(--secondary-text-color);
+}
+
+strong {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* App-Style Buttons */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: #222222; /* Darker text for better contrast on accent */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    line-height: 1.5;
+}
+
+.button:hover {
+    background-color: var(--accent-dark);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.button.secondary {
+    background-color: var(--card-bg);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.button.secondary:hover {
+    background-color: rgba(229, 124, 101, 0.1);
+}
+
+.button.teal {
+    background-color: var(--secondary-color);
+}
+
+.button.teal:hover {
+    background-color: #3db8b0;
+}
+
+/* Icons */
+.nav-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    vertical-align: -4px;
+}
+
+.feature i {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    stroke-width: 1.5;
+}
+
+.button i {
+    margin-right: 6px;
+    vertical-align: -2px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--card-bg);
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    color: var(--secondary-text-color);
+    font-size: 0.9375rem;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--accent-light);
+}
+
+/* Hero Section - Dark Theme */
+.hero {
+    padding: 80px 0;
+    background-color: var(--background-color);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero .container {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-text-color);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.app-preview {
+    margin-top: 40px;
+    position: relative;
+}
+
+.app-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+.trust-bar {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trust-text {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
+}
+
+.trust-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.trust-logos img {
+    height: 30px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.trust-logos img:hover {
+    opacity: 1;
+}
+
+/* Features Section - Dark Theme */
+.features-section {
+    padding: 80px 0;
+    background-color: var(--card-bg);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.section-header h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.section-header h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: var(--secondary-text-color);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature {
+    background: var(--background-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+}
+
+.feature img,
+.feature svg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.feature p {
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* CTA Section - App Style */
+.cta-section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cta-section h2 {
+    color: var(--text-color);
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-section p {
+    color: var(--secondary-text-color);
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-section .button {
+    background-color: var(--accent-color);
+    color: #222222; /* Darker text for better contrast on accent */
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+}
+
+.cta-section .button:hover {
+    background-color: var(--accent-dark);
+}
+
+/* Testimonials - Dark Theme */
+.testimonials {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+.testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    max-width: 340px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+}
+
+.testimonial p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--secondary-text-color);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial div {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* FAQ Section - Dark Theme */
+.faq-short {
+    padding: 60px 0;
+    background-color: var(--card-bg);
+}
+
+.faq-short h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-short details {
+    background: var(--background-color);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.faq-short details:hover {
+    border-color: var(--accent-color);
+}
+
+.faq-short summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--text-color);
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-short summary::after {
+    content: '+';
+    color: var(--accent-color);
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.faq-short details[open] summary::after {
+    content: '−';
+}
+
+.faq-short details div {
+    margin-top: 12px;
+    color: var(--secondary-text-color);
+    padding-left: 8px;
+}
+
+/* App Store Badge */
+.app-store-badge {
+    height: 40px;
+    margin-right: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .trust-bar {
+        align-items: center;
+    }
+    
+    .section-header {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    header nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    header nav a {
+        margin: 5px 10px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .hero p {
+        font-size: 1.125rem;
+    }
+    
+    .features-section, 
+    .testimonials, 
+    .cta-section, 
+    .faq-section, 
+    .security-section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-section p {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.875rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .cta-section p {
+        font-size: 1rem;
+    }
+    
+    .cta-section .button {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
