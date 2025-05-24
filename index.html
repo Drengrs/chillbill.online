@@ -23,10 +23,70 @@
     <meta name="twitter:description" content="Chill Bill: Create invoices and quotes instantly using just your voice. Secure, on-device processing for iOS. Integrates with Xero.">
     <meta name="twitter:image" content="https://www.chillbill.app/images/new_logo.png">
     <link rel="icon" href="chillbill_favicon.ico" type="image/x-icon">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3TXVC3W0Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K3TXVC3W0Z');
+    </script>
+    
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
+            
+            // Enhanced Analytics Event Tracking
+            function trackEvent(action, category, label) {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', action, {
+                        'event_category': category,
+                        'event_label': label
+                    });
+                }
+            }
+            
+            // Track Get Started button clicks
+            document.querySelectorAll('a[href="#signup"], .button').forEach(button => {
+                button.addEventListener('click', function() {
+                    trackEvent('click', 'CTA', 'Get Started Button');
+                });
+            });
+            
+            // Track feature section views
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const featureTitle = entry.target.querySelector('h3')?.textContent;
+                        if (featureTitle) {
+                            trackEvent('view', 'Features', featureTitle);
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            document.querySelectorAll('.feature').forEach(feature => {
+                observer.observe(feature);
+            });
+            
+            // Track video interactions
+            const video = document.querySelector('video');
+            if (video) {
+                video.addEventListener('play', () => trackEvent('play', 'Video', 'Promo Video'));
+                video.addEventListener('ended', () => trackEvent('complete', 'Video', 'Promo Video'));
+            }
+            
+            // Track FAQ interactions
+            document.querySelectorAll('details').forEach(detail => {
+                detail.addEventListener('toggle', function() {
+                    if (this.open) {
+                        const question = this.querySelector('summary').textContent;
+                        trackEvent('expand', 'FAQ', question);
+                    }
+                });
+            });
         });
     </script>
     <script type="application/ld+json">

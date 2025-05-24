@@ -1,0 +1,15 @@
+# Ignore markdown documentation files
+*.md
+
+# Ignore common system files
+.DS_Store
+Thumbs.db
+
+# Ignore editor files
+.vscode/
+*.swp
+*.swo
+
+# Ignore temporary files
+*.tmp
+*.temp
